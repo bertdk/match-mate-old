@@ -1,0 +1,27 @@
+version: '3'
+services:
+  postgres:
+    container_name: match-mate-postgres
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - TZ=GMT
+      - PGTZ=GMT
+    volumes:
+      - ./data/postgres:/data/match-mate-postgres
+    env_file:
+      - docker.env
+
+  postgres-test:
+    container_name: match-mate-postgres-test
+    image: postgres:latest
+    ports:
+      - '5433:5432'
+    environment:
+      - TZ=GMT
+      - PGTZ=GMT
+    volumes:
+      - ./data/postgres:/data/match-mate-postgres
+    env_file:
+      - docker.test.env

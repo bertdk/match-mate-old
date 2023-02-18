@@ -1,0 +1,34 @@
+import { INestApplication } from '@nestjs/common';
+import { NestFactory } from '@nestjs/core';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
+import { AppModule } from './app.module';
+
+const bootstrap = async () => {
+  const appOptions = { cors: true };
+  const app = await NestFactory.create(AppModule, appOptions);
+  app.setGlobalPrefix('api');
+
+  initializeSwagger(app);
+
+  const port = 4000;
+  await app.listen(port, () => {
+    console.info(`=================================`);
+    console.info(`🚀 http://localhost:${port}/docs`);
+    console.info(`=================================`);
+  });
+};
+
+const initializeSwagger = (app: INestApplication) => {
+  const config = new DocumentBuilder()
+    .setTitle('Match Mate')
+    .setDescription('The Match Mate API description')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+};
+
+(async () => {
+  await bootstrap();
+})().catch(e => console.log(e));

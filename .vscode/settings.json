@@ -1,0 +1,36 @@
+{
+  "cSpell.words": ["Mikro", "nestjs"],
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules/**": true,
+    "build/**": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "typescriptHero.imports.organizeOnSave": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0a2b50",
+    "titleBar.activeBackground": "#0a2b50",
+    "titleBar.activeForeground": "#e7e7e7",
+    "activityBar.activeBackground": "#0a2b50",
+    "activityBar.activeBorder": "#548b7d",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#46280c",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#0a2b50",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#0e488a",
+    "titleBar.inactiveBackground": "#061322",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "editor.tabSize": 2,
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.highlights.useColourScheme": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "task.allowAutomaticTasks": "on"
+}

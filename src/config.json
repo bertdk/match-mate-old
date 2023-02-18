@@ -1,0 +1,11 @@
+{
+  "tsNode": false,
+  "databaseUrl": "postgresql://root:root@127.0.0.1/match-mate-db",
+  "postgresUser": "",
+  "postgresPassword": "",
+  "postgresDb": "",
+  "postgresHost": "",
+  "postgresInstance": "",
+  "postgresPort": 5432,
+  "postgresSslMode": false
+}
