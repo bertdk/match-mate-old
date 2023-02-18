@@ -7,5 +7,6 @@
   "postgresHost": "",
   "postgresInstance": "",
   "postgresPort": 5432,
-  "postgresSslMode": false
+  "postgresSslMode": false,
+  "port": 4000
 }

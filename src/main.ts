@@ -1,6 +1,7 @@
 import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { config as env } from 'config';
 
 import { AppModule } from './app.module';
 
@@ -11,7 +12,7 @@ const bootstrap = async () => {
 
   initializeSwagger(app);
 
-  const port = 4000;
+  const port = env.port || 4000;
   await app.listen(port, () => {
     console.info(`=================================`);
     console.info(`🚀 http://localhost:${port}/docs`);
@@ -31,4 +32,4 @@ const initializeSwagger = (app: INestApplication) => {
 
 (async () => {
   await bootstrap();
-})().catch(e => console.log(e));
+})().catch(e => console.error(e));
