@@ -27,7 +27,19 @@ const initializeSwagger = (app: INestApplication) => {
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document);
+  SwaggerModule.setup('docs', app, document, {
+    swaggerOptions: {
+      persistAuthorization: true,
+      defaultModelsExpandDepth: -1,
+      syntaxHighlight: {
+        activate: true,
+        theme: 'arta',
+      },
+      tryItOutEnabled: true,
+      queryConfigEnabled: true,
+    },
+    customfavIcon: '/public/favicon.ico',
+  });
 };
 
 (async () => {
