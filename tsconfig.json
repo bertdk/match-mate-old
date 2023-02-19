@@ -21,7 +21,6 @@
     "strictBindCallApply": false,
     "strictNullChecks": false,
     "target": "ES2019",
-    "tsBuildInfoFile": "./build/.cache/buildInfo.json",
     "typeRoots": ["src/definitions", "node_modules/@types"],
     "paths": {
       "*": ["./*"]
