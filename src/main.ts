@@ -38,7 +38,7 @@ const initializeSwagger = (app: INestApplication) => {
       tryItOutEnabled: true,
       queryConfigEnabled: true,
     },
-    customfavIcon: '/public/favicon.ico',
+    customfavIcon: '/static/favicon.ico',
   });
 };
 
